@@ -74,7 +74,10 @@ public class D3OpenerRemoteMethod extends AbstractRESTRemoteControlMethod {
             final String host = context.getBaseUri().getHost();
             if (!host.equals("localhost") && !host.equals("127.0.0.1")) {
                 log.info("Keine Request von remote rechnern möglich: " + host);
-                return Response.status(Status.SERVICE_UNAVAILABLE).entity("not possible from remote").build();
+                return Response.status(Status.SERVICE_UNAVAILABLE)
+                            .entity("not possible from remote")
+                            .header("Access-Control-Allow-Origin", "*")
+                            .build();
             } else {
                 try {
                     final Runtime rt = Runtime.getRuntime();
@@ -84,13 +87,17 @@ public class D3OpenerRemoteMethod extends AbstractRESTRemoteControlMethod {
                                 .header("Access-Control-Allow-Origin", "*")
                                 .build();
                 } catch (Exception e) {
-                    return Response.status(Status.INTERNAL_SERVER_ERROR).entity(e.getMessage()).build();
+                    return Response.status(Status.INTERNAL_SERVER_ERROR)
+                                .entity(e.getMessage())
+                                .header("Access-Control-Allow-Origin", "*")
+                                .build();
                 }
             }
         } catch (Exception ex) {
             log.error("Fehler beim bestimmen des Hosts Request nicht möglich");
             return Response.status(Status.INTERNAL_SERVER_ERROR)
                         .entity("Could not determine casller host:" + ex.getMessage())
+                        .header("Access-Control-Allow-Origin", "*")
                         .build();
         }
     }
