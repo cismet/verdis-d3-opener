@@ -25,7 +25,6 @@ import javax.ws.rs.core.UriInfo;
 
 import de.cismet.remote.AbstractRESTRemoteControlMethod;
 import de.cismet.remote.RESTRemoteControlMethod;
-
 /**
  * DOCUMENT ME!
  *
@@ -72,7 +71,8 @@ public class D3OpenerRemoteMethod extends AbstractRESTRemoteControlMethod {
 
         try {
             final String host = context.getBaseUri().getHost();
-            if (!host.equals("localhost") && !host.equals("127.0.0.1")) {
+            if (!host.equals("localhost") && !host.equals("localhost.certified.by.cismet.de")
+                        && !host.equals("127.0.0.1")) {
                 log.info("Keine Request von remote rechnern möglich: " + host);
                 return Response.status(Status.SERVICE_UNAVAILABLE)
                             .entity("not possible from remote")
