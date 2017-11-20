@@ -52,16 +52,30 @@ public class D3OpenerService {
             String error = "";
             String image = "/verdis/d3.png";
             int port = 3033;
+            String storePass = "123456";
+            String keyPass = "123456";
             try {
                 port = Integer.parseInt(args[0]);
             } catch (Exception e) {
                 error = " (" + e.getMessage() + ". going to use default port " + port + ")";
             }
             try {
-                RESTRemoteControlStarter.initRestRemoteControlMethods(port);
+                storePass = args[1];
+                keyPass = args[2];
+            } catch (Exception e) {
+                error = " (" + e.getMessage() + ". going to use default keystore credentials)";
+            }
+            try {
+                RESTRemoteControlStarter.initSecureRestRemoteControlMethods(
+                    port,
+                    D3OpenerService.class.getResource("/verdis/keystore.jks").toExternalForm(),
+                    storePass,
+                    keyPass);
             } catch (Exception e) {
                 image = "/verdis/d3bw.png";
                 error = " (" + e.getMessage() + ")";
+                System.out.println("Fehler beim Starten des Servers");
+                e.printStackTrace();
             }
 
             final TrayIcon trayIcon = new TrayIcon(new javax.swing.ImageIcon(
