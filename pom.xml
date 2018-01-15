@@ -10,7 +10,7 @@
 
     <groupId>de.cismet.verdis</groupId>
     <artifactId>d3-opener</artifactId>
-    <version>1.2-SNAPSHOT</version>
+    <version>6.0</version>
     <packaging>jar</packaging>
 
     <properties>
@@ -30,7 +30,7 @@
         <connection>https://github.com/cismet/verdis-d3-opener.git</connection>
         <developerConnection>scm:git:git@github.com:cismet/verdis-d3-opener.git</developerConnection>
         <url>https://github.com/cismet/verdis-d3-opener</url>
-      <tag>HEAD</tag>
+      <tag>v6.0</tag>
   </scm>
 
   <issueManagement>
