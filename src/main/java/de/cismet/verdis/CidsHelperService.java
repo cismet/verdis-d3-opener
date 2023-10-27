@@ -30,7 +30,7 @@ import de.cismet.remote.RESTRemoteControlStarter;
  * @author   thorsten
  * @version  $Revision$, $Date$
  */
-public class D3OpenerService {
+public class CidsHelperService {
 
     //~ Methods ----------------------------------------------------------------
 
@@ -52,25 +52,19 @@ public class D3OpenerService {
             String error = "";
             String image = "/verdis/d3.png";
             int port = 3033;
-            String storePass = "123456";
-            String keyPass = "123456";
+
             try {
                 port = Integer.parseInt(args[0]);
             } catch (Exception e) {
                 error = " (" + e.getMessage() + ". going to use default port " + port + ")";
             }
-            try {
-                storePass = args[1];
-                keyPass = args[2];
-            } catch (Exception e) {
-                error = " (" + e.getMessage() + ". going to use default keystore credentials)";
+
+            if (args.length == 7) {
+                RendererRemoteMethod.initStaticVariable(args[1], args[2], args[3], args[4], args[5], args[6]);
             }
+
             try {
-                RESTRemoteControlStarter.initSecureRestRemoteControlMethods(
-                    port,
-                    D3OpenerService.class.getResource("/verdis/keystore.jks").toExternalForm(),
-                    storePass,
-                    keyPass);
+                RESTRemoteControlStarter.initRestRemoteControlMethods(port);
             } catch (Exception e) {
                 image = "/verdis/d3bw.png";
                 error = " (" + e.getMessage() + ")";
@@ -79,7 +73,7 @@ public class D3OpenerService {
             }
 
             final TrayIcon trayIcon = new TrayIcon(new javax.swing.ImageIcon(
-                        D3OpenerService.class.getResource(image)).getImage(),
+                        CidsHelperService.class.getResource(image)).getImage(),
                     "verdis d.3 Helper"
                             + error);
             trayIcon.setImageAutoSize(true);
@@ -100,7 +94,7 @@ public class D3OpenerService {
                     @Override
                     public void actionPerformed(final ActionEvent e) {
                         JOptionPane.showMessageDialog(null,
-                            "Öffnen der d.3 Suche aus verdis2go.");
+                            "Öffnen der d.3 Suche und Verschiedener Renderer.");
                     }
                 });
             exitItem.addActionListener(new ActionListener() {

@@ -32,13 +32,13 @@ import de.cismet.remote.RESTRemoteControlMethod;
  * @author   Benjamin Friedrich (benjamin.friedrich@cismet.de)
  * @version  $Revision$, $Date$
  */
-@Path("/open-d3/")
+@Path("/d3/")
 @ServiceProvider(service = RESTRemoteControlMethod.class)
-public class D3OpenerRemoteMethod extends AbstractRESTRemoteControlMethod {
+public class D3RemoteMethod extends AbstractRESTRemoteControlMethod {
 
     //~ Static fields/initializers ---------------------------------------------
 
-    private static final org.apache.log4j.Logger log = org.apache.log4j.Logger.getLogger(D3OpenerRemoteMethod.class);
+    private static final org.apache.log4j.Logger log = org.apache.log4j.Logger.getLogger(D3RemoteMethod.class);
 
     //~ Instance fields --------------------------------------------------------
 
@@ -49,8 +49,8 @@ public class D3OpenerRemoteMethod extends AbstractRESTRemoteControlMethod {
     /**
      * Creates a new GoToKassenzeichenRemoteMethod object.
      */
-    public D3OpenerRemoteMethod() {
-        super(-1, "/open-d3/");
+    public D3RemoteMethod() {
+        super(-1, "/d3/");
     }
 
     //~ Methods ----------------------------------------------------------------
@@ -71,8 +71,7 @@ public class D3OpenerRemoteMethod extends AbstractRESTRemoteControlMethod {
 
         try {
             final String host = context.getBaseUri().getHost();
-            if (!host.equals("localhost") && !host.equals("localhost.certified.by.cismet.de")
-                        && !host.equals("127.0.0.1")) {
+            if (!host.equals("localhost") && !host.equals("127.0.0.1")) {
                 log.info("Keine Request von remote rechnern möglich: " + host);
                 return Response.status(Status.SERVICE_UNAVAILABLE)
                             .entity("not possible from remote")

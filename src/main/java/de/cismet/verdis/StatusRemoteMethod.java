@@ -30,13 +30,13 @@ import de.cismet.remote.RESTRemoteControlMethod;
  *
  * @version  $Revision$, $Date$
  */
-@Path("/open-d3-available/")
+@Path("/available/")
 @ServiceProvider(service = RESTRemoteControlMethod.class)
-public class D3OpenerStatus extends AbstractRESTRemoteControlMethod {
+public class StatusRemoteMethod extends AbstractRESTRemoteControlMethod {
 
     //~ Static fields/initializers ---------------------------------------------
 
-    private static final org.apache.log4j.Logger log = org.apache.log4j.Logger.getLogger(D3OpenerStatus.class);
+    private static final org.apache.log4j.Logger log = org.apache.log4j.Logger.getLogger(StatusRemoteMethod.class);
 
     //~ Instance fields --------------------------------------------------------
 
@@ -47,8 +47,8 @@ public class D3OpenerStatus extends AbstractRESTRemoteControlMethod {
     /**
      * Creates a new GoToKassenzeichenRemoteMethod object.
      */
-    public D3OpenerStatus() {
-        super(-1, "/open-d3-available/");
+    public StatusRemoteMethod() {
+        super(-1, "/available/");
     }
 
     //~ Methods ----------------------------------------------------------------
@@ -63,8 +63,7 @@ public class D3OpenerStatus extends AbstractRESTRemoteControlMethod {
     public Response available() {
         try {
             final String host = context.getBaseUri().getHost();
-            if (!host.equals("localhost") && !host.equals("localhost.certified.by.cismet.de")
-                        && !host.equals("127.0.0.1")) {
+            if (!host.equals("localhost") && !host.equals("127.0.0.1")) {
                 log.info("Keine Request von remote rechnern möglich: " + host);
                 return Response.status(Status.SERVICE_UNAVAILABLE)
                             .entity("not possible from remote")
