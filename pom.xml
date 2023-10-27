@@ -5,7 +5,7 @@
     <parent>
         <groupId>de.cismet.cids</groupId>
         <artifactId>cids-parent</artifactId>
-         <version>7.0</version>
+         <version>8.0</version>
     </parent>
 
     <groupId>de.cismet.verdis</groupId>
@@ -49,7 +49,7 @@
           <dependency>
               <groupId>de.cismet</groupId>
               <artifactId>cismet-ext-bom</artifactId>
-              <version>7.0</version>
+              <version>8.0</version>
               <type>pom</type>
               <scope>import</scope>
           </dependency>
@@ -58,11 +58,48 @@
           <dependency>
               <groupId>de.cismet.commons</groupId>
               <artifactId>cismet-commons</artifactId>
-              <version>7.0</version>
+              <version>8.0.1</version>
               <type>jar</type>
               <scope>compile</scope>
           </dependency>
-           
+        <dependency>
+            <groupId>de.cismet.commons</groupId>
+            <artifactId>cismet-gui-commons</artifactId>
+            <version>8.0</version>
+        </dependency>
+        <dependency>
+            <groupId>de.cismet.cids.navigator</groupId>
+            <artifactId>cids-navigator</artifactId>
+            <version>8.0.1</version>
+        </dependency>
+        <dependency>
+            <groupId>de.cismet.cids</groupId>
+            <artifactId>cids-server</artifactId>
+            <version>8.0.3</version>
+        </dependency>
+        <dependency>
+            <groupId>de.cismet.commons</groupId>
+            <artifactId>cismap-commons</artifactId>
+            <version>8.0.7</version>
+        </dependency>
+        <dependency>
+            <groupId>de.cismet.verdis</groupId>
+            <artifactId>verdis</artifactId>
+            <type>jar</type>
+            <version>8.0.2</version>
+        </dependency>
+        <dependency>
+            <groupId>de.cismet.cids.custom.wupp</groupId>
+            <artifactId>cids-custom-wuppertal</artifactId>
+            <type>jar</type>
+            <version>8.2.15</version>
+        </dependency>
+        <dependency>
+            <groupId>de.cismet.belis</groupId>
+            <artifactId>belis-client</artifactId>
+            <type>jar</type>
+            <version>8.0</version>
+        </dependency>
         </dependencies>
     </dependencyManagement>
 
@@ -85,7 +122,58 @@
             <groupId>de.cismet.commons</groupId>
             <artifactId>cismet-commons</artifactId>
         </dependency>
-       
+        <dependency>
+            <groupId>de.cismet.commons</groupId>
+            <artifactId>cismet-gui-commons</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>de.cismet.commons</groupId>
+            <artifactId>cismap-commons</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>de.cismet.cids.navigator</groupId>
+            <artifactId>cids-navigator</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>de.cismet.cids</groupId>
+            <artifactId>cids-server</artifactId>
+        </dependency>
+        <!--runtime dependencies-->
+        <dependency>
+            <groupId>de.cismet.verdis</groupId>
+            <artifactId>verdis</artifactId>
+            <type>jar</type>
+            <scope>runtime</scope>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.netbeans.external</groupId>
+                    <artifactId>swing-layout-1.0.4</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.netbeans.external</groupId>
+                    <artifactId>nb-javac-api</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>de.cismet.cids.custom.wupp</groupId>
+            <artifactId>cids-custom-wuppertal</artifactId>
+            <type>jar</type>
+            <scope>runtime</scope>
+        </dependency>
+        <dependency>
+            <groupId>de.cismet.belis</groupId>
+            <artifactId>belis-client</artifactId>
+            <type>jar</type>
+            <scope>runtime</scope>
+        </dependency>
+        <!-- END: cids-dependencies -->        
+        <dependency>
+            <groupId>org.netbeans.api</groupId>
+            <artifactId>org-openide-util-lookup</artifactId>
+            <scope>compile</scope>
+            <type>jar</type>
+        </dependency>
     </dependencies>
     
     <build>
