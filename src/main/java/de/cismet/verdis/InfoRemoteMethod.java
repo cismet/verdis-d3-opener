@@ -31,11 +31,11 @@ import de.cismet.remote.RESTRemoteControlMethod;
  */
 @Path("/info/")
 @ServiceProvider(service = RESTRemoteControlMethod.class)
-public class D3OpenerInfo extends AbstractRESTRemoteControlMethod {
+public class InfoRemoteMethod extends AbstractRESTRemoteControlMethod {
 
     //~ Static fields/initializers ---------------------------------------------
 
-    private static final org.apache.log4j.Logger log = org.apache.log4j.Logger.getLogger(D3OpenerInfo.class);
+    private static final org.apache.log4j.Logger log = org.apache.log4j.Logger.getLogger(InfoRemoteMethod.class);
 
     //~ Instance fields --------------------------------------------------------
 
@@ -46,7 +46,7 @@ public class D3OpenerInfo extends AbstractRESTRemoteControlMethod {
     /**
      * Creates a new GoToKassenzeichenRemoteMethod object.
      */
-    public D3OpenerInfo() {
+    public InfoRemoteMethod() {
         super(-1, "/info/");
     }
 
