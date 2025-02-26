@@ -41,10 +41,16 @@ import Sirius.server.middleware.types.MetaObjectNode;
 import Sirius.server.middleware.types.Node;
 
 import org.apache.log4j.PropertyConfigurator;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.core.LoggerContext;
+import org.apache.logging.log4j.core.config.ConfigurationSource;
+import org.apache.logging.log4j.core.config.Configurator;
+import org.apache.logging.log4j.core.config.xml.XmlConfiguration;
 
 import org.openide.util.Lookup;
 import org.openide.util.lookup.ServiceProvider;
 
+import java.io.ByteArrayInputStream;
 import java.io.File;
 import java.io.InputStream;
 
@@ -492,8 +498,11 @@ public class RendererRemoteMethod extends AbstractRESTRemoteControlMethod {
                 } catch (Exception e) {
                     in = log4jPropertiesURL.openStream();
                 }
-                properties.load(in);
-                PropertyConfigurator.configure(properties);
+                try(final InputStream configStream = in) {
+                    final ConfigurationSource source = new ConfigurationSource(configStream);
+                    final LoggerContext context = (LoggerContext)LogManager.getContext(false);
+                    context.start(new XmlConfiguration(context, source)); // Apply new configuration
+                }
 
                 l4jinited = true;
             } catch (final Exception e) {
