@@ -5,7 +5,7 @@
     <parent>
         <groupId>de.cismet.cids</groupId>
         <artifactId>cids-parent</artifactId>
-         <version>8.0</version>
+         <version>9.0</version>
     </parent>
 
     <groupId>de.cismet.verdis</groupId>
@@ -49,7 +49,7 @@
           <dependency>
               <groupId>de.cismet</groupId>
               <artifactId>cismet-ext-bom</artifactId>
-              <version>8.0</version>
+              <version>9.0</version>
               <type>pom</type>
               <scope>import</scope>
           </dependency>
@@ -58,47 +58,177 @@
           <dependency>
               <groupId>de.cismet.commons</groupId>
               <artifactId>cismet-commons</artifactId>
-              <version>8.0.1</version>
+              <version>9.0</version>
               <type>jar</type>
               <scope>compile</scope>
           </dependency>
         <dependency>
             <groupId>de.cismet.commons</groupId>
             <artifactId>cismet-gui-commons</artifactId>
-            <version>8.0</version>
+            <version>9.0</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.netbeans.api</groupId>
+                    <artifactId>org-netbeans-api-annotations-common</artifactId>
+                </exclusion>
+                  <exclusion>
+                        <groupId>org.netbeans.api</groupId>
+                        <artifactId>org-netbeans-modules-editor-lib</artifactId>
+                  </exclusion>
+                  <exclusion>
+                        <groupId>org.netbeans.api</groupId>
+                        <artifactId>org-netbeans-modules-editor</artifactId>
+                  </exclusion>
+                  <exclusion>
+                        <groupId>org.netbeans.api</groupId>
+                        <artifactId>org-netbeans-api-intent</artifactId>
+                  </exclusion>
+                  <exclusion>
+                        <groupId>org.netbeans.api</groupId>
+                        <artifactId>org-netbeans-api-io</artifactId>
+                  </exclusion>
+                  <exclusion>
+                        <groupId>org.netbeans.api</groupId>
+                        <artifactId>org-netbeans-api-scripting</artifactId>
+                  </exclusion>
+                  <exclusion>
+                        <groupId>org.netbeans.api</groupId>
+                        <artifactId>org-netbeans-api-templates</artifactId>
+                  </exclusion>
+                  <exclusion>
+                        <groupId>org.netbeans.modules</groupId>
+                        <artifactId>org-netbeans-bootstrap</artifactId>
+                  </exclusion>
+                  <exclusion>
+                        <groupId>org.netbeans.modules</groupId>
+                        <artifactId>org-netbeans-core</artifactId>
+                  </exclusion>
+                  <exclusion>
+                        <groupId>org.netbeans.modules</groupId>
+                        <artifactId>org-netbeans-core-startup</artifactId>
+                  </exclusion>
+                  <exclusion>
+                        <groupId>org.netbeans.modules</groupId>
+                        <artifactId>org-netbeans-modules-editor-errorstripe</artifactId>
+                  </exclusion>
+                  <exclusion>
+                        <groupId>org.netbeans.api</groupId>
+                        <artifactId>org-netbeans-modules-editor-fold</artifactId>
+                  </exclusion>
+                  <exclusion>
+                        <groupId>org.netbeans.api</groupId>
+                        <artifactId>org-netbeans-modules-editor-indent</artifactId>
+                  </exclusion>
+                  <exclusion>
+                        <groupId>org.netbeans.api</groupId>
+                        <artifactId>org-netbeans-modules-editor-document</artifactId>
+                  </exclusion>
+                  <exclusion>
+                        <groupId>org.netbeans.api</groupId>
+                        <artifactId>org-netbeans-modules-editor-lib2</artifactId>
+                  </exclusion>
+                  <exclusion>
+                        <groupId>org.netbeans.api</groupId>
+                        <artifactId>org-netbeans-modules-editor-settings</artifactId>
+                  </exclusion>
+                  <exclusion>
+                        <groupId>org.netbeans.api</groupId>
+                        <artifactId>org-netbeans-modules-editor-settings-lib</artifactId>
+                  </exclusion>
+                  <exclusion>
+                        <groupId>org.netbeans.api</groupId>
+                        <artifactId>org-netbeans-modules-lexer</artifactId>
+                  </exclusion>
+                  <exclusion>
+                        <groupId>org.netbeans.api</groupId>
+                        <artifactId>org-netbeans-modules-options-api</artifactId>
+                  </exclusion>
+                  <exclusion>
+                        <groupId>org.netbeans.modules</groupId>
+                        <artifactId>org-netbeans-modules-options-keymap</artifactId>
+                  </exclusion>
+                  <exclusion>
+                        <groupId>org.netbeans.api</groupId>
+                        <artifactId>org-netbeans-modules-projectapi</artifactId>
+                  </exclusion>
+                  <exclusion>
+                        <groupId>org.netbeans.api</groupId>
+                        <artifactId>org-netbeans-modules-queries</artifactId>
+                  </exclusion>
+                  <exclusion>
+                        <groupId>org.netbeans.api</groupId>
+                        <artifactId>org-netbeans-swing-outline</artifactId>
+                  </exclusion>
+                  <exclusion>
+                        <groupId>org.netbeans.api</groupId>
+                        <artifactId>org-netbeans-swing-tabcontrol</artifactId>
+                  </exclusion>
+                  <exclusion>
+                        <groupId>org.netbeans.api</groupId>
+                        <artifactId>org-openide-actions</artifactId>
+                  </exclusion>
+                  <exclusion>
+                        <groupId>org.netbeans.api</groupId>
+                        <artifactId>org-openide-explorer</artifactId>
+                  </exclusion>
+                  <exclusion>
+                        <groupId>org.netbeans.api</groupId>
+                        <artifactId>org-openide-io</artifactId>
+                  </exclusion>
+                  <exclusion>
+                        <groupId>org.netbeans.api</groupId>
+                        <artifactId>org-openide-nodes</artifactId>
+                  </exclusion>
+                  <exclusion>
+                        <groupId>org.netbeans.api</groupId>
+                        <artifactId>org-openide-text</artifactId>
+                  </exclusion>
+                  <exclusion>
+                        <groupId>org.netbeans.api</groupId>
+                        <artifactId>org-openide-windows</artifactId>
+                  </exclusion>
+                <exclusion>
+                    <groupId>org.netbeans.external</groupId>
+                    <artifactId>swing-layout-1.0.4</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.netbeans.external</groupId>
+                    <artifactId>nb-javac-api</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
         <dependency>
             <groupId>de.cismet.cids.navigator</groupId>
             <artifactId>cids-navigator</artifactId>
-            <version>8.0.1</version>
+            <version>9.0</version>
         </dependency>
         <dependency>
             <groupId>de.cismet.cids</groupId>
             <artifactId>cids-server</artifactId>
-            <version>8.0.3</version>
+            <version>9.0</version>
         </dependency>
         <dependency>
             <groupId>de.cismet.commons</groupId>
             <artifactId>cismap-commons</artifactId>
-            <version>8.0.7</version>
+            <version>9.0</version>
         </dependency>
         <dependency>
             <groupId>de.cismet.verdis</groupId>
             <artifactId>verdis</artifactId>
             <type>jar</type>
-            <version>8.0.2</version>
+            <version>9.0</version>
         </dependency>
         <dependency>
             <groupId>de.cismet.cids.custom.wupp</groupId>
             <artifactId>cids-custom-wuppertal</artifactId>
             <type>jar</type>
-            <version>8.2.15</version>
+            <version>9.0</version>
         </dependency>
         <dependency>
             <groupId>de.cismet.belis</groupId>
             <artifactId>belis-client</artifactId>
             <type>jar</type>
-            <version>8.0</version>
+            <version>9.0</version>
         </dependency>
         </dependencies>
     </dependencyManagement>
@@ -112,8 +242,20 @@
             <type>jar</type>
         </dependency>
          <dependency>
-            <groupId>log4j</groupId>
-            <artifactId>log4j</artifactId>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-1.2-api</artifactId>
+            <scope>compile</scope>
+            <type>jar</type>
+        </dependency>
+         <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-core</artifactId>
+            <scope>compile</scope>
+            <type>jar</type>
+        </dependency>
+         <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-api</artifactId>
             <scope>compile</scope>
             <type>jar</type>
         </dependency>
@@ -125,10 +267,286 @@
         <dependency>
             <groupId>de.cismet.commons</groupId>
             <artifactId>cismet-gui-commons</artifactId>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.netbeans.api</groupId>
+                    <artifactId>org-netbeans-api-annotations-common</artifactId>
+                </exclusion>
+                  <exclusion>
+                        <groupId>org.netbeans.api</groupId>
+                        <artifactId>org-netbeans-modules-editor-lib</artifactId>
+                  </exclusion>
+                  <exclusion>
+                        <groupId>org.netbeans.api</groupId>
+                        <artifactId>org-netbeans-modules-editor</artifactId>
+                  </exclusion>
+                  <exclusion>
+                        <groupId>org.netbeans.api</groupId>
+                        <artifactId>org-netbeans-api-intent</artifactId>
+                  </exclusion>
+                  <exclusion>
+                        <groupId>org.netbeans.api</groupId>
+                        <artifactId>org-netbeans-api-io</artifactId>
+                  </exclusion>
+                  <exclusion>
+                        <groupId>org.netbeans.api</groupId>
+                        <artifactId>org-netbeans-api-scripting</artifactId>
+                  </exclusion>
+                  <exclusion>
+                        <groupId>org.netbeans.api</groupId>
+                        <artifactId>org-netbeans-api-templates</artifactId>
+                  </exclusion>
+                  <exclusion>
+                        <groupId>org.netbeans.modules</groupId>
+                        <artifactId>org-netbeans-bootstrap</artifactId>
+                  </exclusion>
+                  <exclusion>
+                        <groupId>org.netbeans.modules</groupId>
+                        <artifactId>org-netbeans-core</artifactId>
+                  </exclusion>
+                  <exclusion>
+                        <groupId>org.netbeans.modules</groupId>
+                        <artifactId>org-netbeans-core-startup</artifactId>
+                  </exclusion>
+                  <exclusion>
+                        <groupId>org.netbeans.modules</groupId>
+                        <artifactId>org-netbeans-modules-editor-errorstripe</artifactId>
+                  </exclusion>
+                  <exclusion>
+                        <groupId>org.netbeans.api</groupId>
+                        <artifactId>org-netbeans-modules-editor-fold</artifactId>
+                  </exclusion>
+                  <exclusion>
+                        <groupId>org.netbeans.api</groupId>
+                        <artifactId>org-netbeans-modules-editor-indent</artifactId>
+                  </exclusion>
+                  <exclusion>
+                        <groupId>org.netbeans.api</groupId>
+                        <artifactId>org-netbeans-modules-editor-document</artifactId>
+                  </exclusion>
+                  <exclusion>
+                        <groupId>org.netbeans.api</groupId>
+                        <artifactId>org-netbeans-modules-editor-lib2</artifactId>
+                  </exclusion>
+                  <exclusion>
+                        <groupId>org.netbeans.api</groupId>
+                        <artifactId>org-netbeans-modules-editor-settings</artifactId>
+                  </exclusion>
+                  <exclusion>
+                        <groupId>org.netbeans.api</groupId>
+                        <artifactId>org-netbeans-modules-editor-settings-lib</artifactId>
+                  </exclusion>
+                  <exclusion>
+                        <groupId>org.netbeans.api</groupId>
+                        <artifactId>org-netbeans-modules-lexer</artifactId>
+                  </exclusion>
+                  <exclusion>
+                        <groupId>org.netbeans.api</groupId>
+                        <artifactId>org-netbeans-modules-options-api</artifactId>
+                  </exclusion>
+                  <exclusion>
+                        <groupId>org.netbeans.modules</groupId>
+                        <artifactId>org-netbeans-modules-options-keymap</artifactId>
+                  </exclusion>
+                  <exclusion>
+                        <groupId>org.netbeans.api</groupId>
+                        <artifactId>org-netbeans-modules-projectapi</artifactId>
+                  </exclusion>
+                  <exclusion>
+                        <groupId>org.netbeans.api</groupId>
+                        <artifactId>org-netbeans-modules-queries</artifactId>
+                  </exclusion>
+                  <exclusion>
+                        <groupId>org.netbeans.api</groupId>
+                        <artifactId>org-netbeans-swing-outline</artifactId>
+                  </exclusion>
+                  <exclusion>
+                        <groupId>org.netbeans.api</groupId>
+                        <artifactId>org-netbeans-swing-tabcontrol</artifactId>
+                  </exclusion>
+                  <exclusion>
+                        <groupId>org.netbeans.api</groupId>
+                        <artifactId>org-openide-actions</artifactId>
+                  </exclusion>
+                  <exclusion>
+                        <groupId>org.netbeans.api</groupId>
+                        <artifactId>org-openide-explorer</artifactId>
+                  </exclusion>
+                  <exclusion>
+                        <groupId>org.netbeans.api</groupId>
+                        <artifactId>org-openide-io</artifactId>
+                  </exclusion>
+                  <exclusion>
+                        <groupId>org.netbeans.api</groupId>
+                        <artifactId>org-openide-nodes</artifactId>
+                  </exclusion>
+                  <exclusion>
+                        <groupId>org.netbeans.api</groupId>
+                        <artifactId>org-openide-text</artifactId>
+                  </exclusion>
+                  <exclusion>
+                        <groupId>org.netbeans.api</groupId>
+                        <artifactId>org-openide-windows</artifactId>
+                  </exclusion>
+                <exclusion>
+                    <groupId>org.netbeans.external</groupId>
+                    <artifactId>swing-layout-1.0.4</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.netbeans.external</groupId>
+                    <artifactId>nb-javac-api</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.netbeans.api</groupId>
+                    <artifactId>org-netbeans-api-progress</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.netbeans.api</groupId>
+                    <artifactId>org-openide-dialogs</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
         <dependency>
             <groupId>de.cismet.commons</groupId>
             <artifactId>cismap-commons</artifactId>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.netbeans.api</groupId>
+                    <artifactId>org-netbeans-api-annotations-common</artifactId>
+                </exclusion>
+                  <exclusion>
+                        <groupId>org.netbeans.api</groupId>
+                        <artifactId>org-netbeans-modules-editor-lib</artifactId>
+                  </exclusion>
+                  <exclusion>
+                        <groupId>org.netbeans.api</groupId>
+                        <artifactId>org-netbeans-modules-editor</artifactId>
+                  </exclusion>
+                  <exclusion>
+                        <groupId>org.netbeans.api</groupId>
+                        <artifactId>org-netbeans-api-intent</artifactId>
+                  </exclusion>
+                  <exclusion>
+                        <groupId>org.netbeans.api</groupId>
+                        <artifactId>org-netbeans-api-io</artifactId>
+                  </exclusion>
+                  <exclusion>
+                        <groupId>org.netbeans.api</groupId>
+                        <artifactId>org-netbeans-api-scripting</artifactId>
+                  </exclusion>
+                  <exclusion>
+                        <groupId>org.netbeans.api</groupId>
+                        <artifactId>org-netbeans-api-templates</artifactId>
+                  </exclusion>
+                  <exclusion>
+                        <groupId>org.netbeans.modules</groupId>
+                        <artifactId>org-netbeans-bootstrap</artifactId>
+                  </exclusion>
+                  <exclusion>
+                        <groupId>org.netbeans.modules</groupId>
+                        <artifactId>org-netbeans-core</artifactId>
+                  </exclusion>
+                  <exclusion>
+                        <groupId>org.netbeans.modules</groupId>
+                        <artifactId>org-netbeans-core-startup</artifactId>
+                  </exclusion>
+                  <exclusion>
+                        <groupId>org.netbeans.modules</groupId>
+                        <artifactId>org-netbeans-modules-editor-errorstripe</artifactId>
+                  </exclusion>
+                  <exclusion>
+                        <groupId>org.netbeans.api</groupId>
+                        <artifactId>org-netbeans-modules-editor-fold</artifactId>
+                  </exclusion>
+                  <exclusion>
+                        <groupId>org.netbeans.api</groupId>
+                        <artifactId>org-netbeans-modules-editor-indent</artifactId>
+                  </exclusion>
+                  <exclusion>
+                        <groupId>org.netbeans.api</groupId>
+                        <artifactId>org-netbeans-modules-editor-document</artifactId>
+                  </exclusion>
+                  <exclusion>
+                        <groupId>org.netbeans.api</groupId>
+                        <artifactId>org-netbeans-modules-editor-lib2</artifactId>
+                  </exclusion>
+                  <exclusion>
+                        <groupId>org.netbeans.api</groupId>
+                        <artifactId>org-netbeans-modules-editor-settings</artifactId>
+                  </exclusion>
+                  <exclusion>
+                        <groupId>org.netbeans.api</groupId>
+                        <artifactId>org-netbeans-modules-editor-settings-lib</artifactId>
+                  </exclusion>
+                  <exclusion>
+                        <groupId>org.netbeans.api</groupId>
+                        <artifactId>org-netbeans-modules-lexer</artifactId>
+                  </exclusion>
+                  <exclusion>
+                        <groupId>org.netbeans.api</groupId>
+                        <artifactId>org-netbeans-modules-options-api</artifactId>
+                  </exclusion>
+                  <exclusion>
+                        <groupId>org.netbeans.modules</groupId>
+                        <artifactId>org-netbeans-modules-options-keymap</artifactId>
+                  </exclusion>
+                  <exclusion>
+                        <groupId>org.netbeans.api</groupId>
+                        <artifactId>org-netbeans-modules-projectapi</artifactId>
+                  </exclusion>
+                  <exclusion>
+                        <groupId>org.netbeans.api</groupId>
+                        <artifactId>org-netbeans-modules-queries</artifactId>
+                  </exclusion>
+                  <exclusion>
+                        <groupId>org.netbeans.api</groupId>
+                        <artifactId>org-netbeans-swing-outline</artifactId>
+                  </exclusion>
+                  <exclusion>
+                        <groupId>org.netbeans.api</groupId>
+                        <artifactId>org-netbeans-swing-tabcontrol</artifactId>
+                  </exclusion>
+                  <exclusion>
+                        <groupId>org.netbeans.api</groupId>
+                        <artifactId>org-openide-actions</artifactId>
+                  </exclusion>
+                  <exclusion>
+                        <groupId>org.netbeans.api</groupId>
+                        <artifactId>org-openide-explorer</artifactId>
+                  </exclusion>
+                  <exclusion>
+                        <groupId>org.netbeans.api</groupId>
+                        <artifactId>org-openide-io</artifactId>
+                  </exclusion>
+                  <exclusion>
+                        <groupId>org.netbeans.api</groupId>
+                        <artifactId>org-openide-nodes</artifactId>
+                  </exclusion>
+                  <exclusion>
+                        <groupId>org.netbeans.api</groupId>
+                        <artifactId>org-openide-text</artifactId>
+                  </exclusion>
+                  <exclusion>
+                        <groupId>org.netbeans.api</groupId>
+                        <artifactId>org-openide-windows</artifactId>
+                  </exclusion>
+                <exclusion>
+                    <groupId>org.netbeans.external</groupId>
+                    <artifactId>swing-layout-1.0.4</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.netbeans.external</groupId>
+                    <artifactId>nb-javac-api</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.netbeans.api</groupId>
+                    <artifactId>org-netbeans-api-progress</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.netbeans.api</groupId>
+                    <artifactId>org-openide-dialogs</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
         <dependency>
             <groupId>de.cismet.cids.navigator</groupId>
@@ -146,12 +564,152 @@
             <scope>runtime</scope>
             <exclusions>
                 <exclusion>
+                    <groupId>org.netbeans.api</groupId>
+                    <artifactId>org-netbeans-modules-diff</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.netbeans.api</groupId>
+                    <artifactId>org-netbeans-api-annotations-common</artifactId>
+                </exclusion>
+                  <exclusion>
+                        <groupId>org.netbeans.api</groupId>
+                        <artifactId>org-netbeans-modules-editor-lib</artifactId>
+                  </exclusion>
+                  <exclusion>
+                        <groupId>org.netbeans.api</groupId>
+                        <artifactId>org-netbeans-modules-editor</artifactId>
+                  </exclusion>
+                  <exclusion>
+                        <groupId>org.netbeans.api</groupId>
+                        <artifactId>org-netbeans-api-intent</artifactId>
+                  </exclusion>
+                  <exclusion>
+                        <groupId>org.netbeans.api</groupId>
+                        <artifactId>org-netbeans-api-io</artifactId>
+                  </exclusion>
+                  <exclusion>
+                        <groupId>org.netbeans.api</groupId>
+                        <artifactId>org-netbeans-api-scripting</artifactId>
+                  </exclusion>
+                  <exclusion>
+                        <groupId>org.netbeans.api</groupId>
+                        <artifactId>org-netbeans-api-templates</artifactId>
+                  </exclusion>
+                  <exclusion>
+                        <groupId>org.netbeans.modules</groupId>
+                        <artifactId>org-netbeans-bootstrap</artifactId>
+                  </exclusion>
+                  <exclusion>
+                        <groupId>org.netbeans.modules</groupId>
+                        <artifactId>org-netbeans-core</artifactId>
+                  </exclusion>
+                  <exclusion>
+                        <groupId>org.netbeans.modules</groupId>
+                        <artifactId>org-netbeans-core-startup</artifactId>
+                  </exclusion>
+                  <exclusion>
+                        <groupId>org.netbeans.modules</groupId>
+                        <artifactId>org-netbeans-modules-editor-errorstripe</artifactId>
+                  </exclusion>
+                  <exclusion>
+                        <groupId>org.netbeans.api</groupId>
+                        <artifactId>org-netbeans-modules-editor-fold</artifactId>
+                  </exclusion>
+                  <exclusion>
+                        <groupId>org.netbeans.api</groupId>
+                        <artifactId>org-netbeans-modules-editor-indent</artifactId>
+                  </exclusion>
+                  <exclusion>
+                        <groupId>org.netbeans.api</groupId>
+                        <artifactId>org-netbeans-modules-editor-document</artifactId>
+                  </exclusion>
+                  <exclusion>
+                        <groupId>org.netbeans.api</groupId>
+                        <artifactId>org-netbeans-modules-editor-lib2</artifactId>
+                  </exclusion>
+                  <exclusion>
+                        <groupId>org.netbeans.api</groupId>
+                        <artifactId>org-netbeans-modules-editor-settings</artifactId>
+                  </exclusion>
+                  <exclusion>
+                        <groupId>org.netbeans.api</groupId>
+                        <artifactId>org-netbeans-modules-editor-settings-lib</artifactId>
+                  </exclusion>
+                  <exclusion>
+                        <groupId>org.netbeans.api</groupId>
+                        <artifactId>org-netbeans-modules-lexer</artifactId>
+                  </exclusion>
+                  <exclusion>
+                        <groupId>org.netbeans.api</groupId>
+                        <artifactId>org-netbeans-modules-options-api</artifactId>
+                  </exclusion>
+                  <exclusion>
+                        <groupId>org.netbeans.modules</groupId>
+                        <artifactId>org-netbeans-modules-options-keymap</artifactId>
+                  </exclusion>
+                  <exclusion>
+                        <groupId>org.netbeans.api</groupId>
+                        <artifactId>org-netbeans-modules-projectapi</artifactId>
+                  </exclusion>
+                  <exclusion>
+                        <groupId>org.netbeans.api</groupId>
+                        <artifactId>org-netbeans-modules-queries</artifactId>
+                  </exclusion>
+                  <exclusion>
+                        <groupId>org.netbeans.api</groupId>
+                        <artifactId>org-netbeans-swing-outline</artifactId>
+                  </exclusion>
+                  <exclusion>
+                        <groupId>org.netbeans.api</groupId>
+                        <artifactId>org-netbeans-swing-tabcontrol</artifactId>
+                  </exclusion>
+                  <exclusion>
+                        <groupId>org.netbeans.api</groupId>
+                        <artifactId>org-openide-actions</artifactId>
+                  </exclusion>
+                  <exclusion>
+                        <groupId>org.netbeans.api</groupId>
+                        <artifactId>org-openide-explorer</artifactId>
+                  </exclusion>
+                  <exclusion>
+                        <groupId>org.netbeans.api</groupId>
+                        <artifactId>org-openide-io</artifactId>
+                  </exclusion>
+                  <exclusion>
+                        <groupId>org.netbeans.api</groupId>
+                        <artifactId>org-openide-nodes</artifactId>
+                  </exclusion>
+                  <exclusion>
+                        <groupId>org.netbeans.api</groupId>
+                        <artifactId>org-openide-text</artifactId>
+                  </exclusion>
+                  <exclusion>
+                        <groupId>org.netbeans.api</groupId>
+                        <artifactId>org-openide-windows</artifactId>
+                  </exclusion>
+                <exclusion>
                     <groupId>org.netbeans.external</groupId>
                     <artifactId>swing-layout-1.0.4</artifactId>
                 </exclusion>
                 <exclusion>
                     <groupId>org.netbeans.external</groupId>
                     <artifactId>nb-javac-api</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.netbeans.api</groupId>
+                    <artifactId>org-netbeans-api-progress</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.netbeans.modules</groupId>
+                    <artifactId>org-netbeans-modules-editor-plain</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.netbeans.modules</groupId>
+                    <artifactId>org-netbeans-modules-editor-mimelookup-impl</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>de.cismet.custom</groupId>
+                    <artifactId>netbeans-visual-diff-standalone-without-dependencies</artifactId>
                 </exclusion>
             </exclusions>
         </dependency>
@@ -173,6 +731,128 @@
             <artifactId>org-openide-util-lookup</artifactId>
             <scope>compile</scope>
             <type>jar</type>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.netbeans.api</groupId>
+                    <artifactId>org-netbeans-api-annotations-common</artifactId>
+                </exclusion>
+                  <exclusion>
+                        <groupId>org.netbeans.api</groupId>
+                        <artifactId>org-netbeans-modules-editor-lib</artifactId>
+                  </exclusion>
+                  <exclusion>
+                        <groupId>org.netbeans.api</groupId>
+                        <artifactId>org-netbeans-modules-editor</artifactId>
+                  </exclusion>
+                  <exclusion>
+                        <groupId>org.netbeans.api</groupId>
+                        <artifactId>org-netbeans-api-intent</artifactId>
+                  </exclusion>
+                  <exclusion>
+                        <groupId>org.netbeans.api</groupId>
+                        <artifactId>org-netbeans-api-io</artifactId>
+                  </exclusion>
+                  <exclusion>
+                        <groupId>org.netbeans.api</groupId>
+                        <artifactId>org-netbeans-api-scripting</artifactId>
+                  </exclusion>
+                  <exclusion>
+                        <groupId>org.netbeans.api</groupId>
+                        <artifactId>org-netbeans-api-templates</artifactId>
+                  </exclusion>
+                  <exclusion>
+                        <groupId>org.netbeans.modules</groupId>
+                        <artifactId>org-netbeans-bootstrap</artifactId>
+                  </exclusion>
+                  <exclusion>
+                        <groupId>org.netbeans.modules</groupId>
+                        <artifactId>org-netbeans-core</artifactId>
+                  </exclusion>
+                  <exclusion>
+                        <groupId>org.netbeans.modules</groupId>
+                        <artifactId>org-netbeans-core-startup</artifactId>
+                  </exclusion>
+                  <exclusion>
+                        <groupId>org.netbeans.modules</groupId>
+                        <artifactId>org-netbeans-modules-editor-errorstripe</artifactId>
+                  </exclusion>
+                  <exclusion>
+                        <groupId>org.netbeans.api</groupId>
+                        <artifactId>org-netbeans-modules-editor-fold</artifactId>
+                  </exclusion>
+                  <exclusion>
+                        <groupId>org.netbeans.api</groupId>
+                        <artifactId>org-netbeans-modules-editor-indent</artifactId>
+                  </exclusion>
+                  <exclusion>
+                        <groupId>org.netbeans.api</groupId>
+                        <artifactId>org-netbeans-modules-editor-document</artifactId>
+                  </exclusion>
+                  <exclusion>
+                        <groupId>org.netbeans.api</groupId>
+                        <artifactId>org-netbeans-modules-editor-lib2</artifactId>
+                  </exclusion>
+                  <exclusion>
+                        <groupId>org.netbeans.api</groupId>
+                        <artifactId>org-netbeans-modules-editor-settings</artifactId>
+                  </exclusion>
+                  <exclusion>
+                        <groupId>org.netbeans.api</groupId>
+                        <artifactId>org-netbeans-modules-editor-settings-lib</artifactId>
+                  </exclusion>
+                  <exclusion>
+                        <groupId>org.netbeans.api</groupId>
+                        <artifactId>org-netbeans-modules-lexer</artifactId>
+                  </exclusion>
+                  <exclusion>
+                        <groupId>org.netbeans.api</groupId>
+                        <artifactId>org-netbeans-modules-options-api</artifactId>
+                  </exclusion>
+                  <exclusion>
+                        <groupId>org.netbeans.modules</groupId>
+                        <artifactId>org-netbeans-modules-options-keymap</artifactId>
+                  </exclusion>
+                  <exclusion>
+                        <groupId>org.netbeans.api</groupId>
+                        <artifactId>org-netbeans-modules-projectapi</artifactId>
+                  </exclusion>
+                  <exclusion>
+                        <groupId>org.netbeans.api</groupId>
+                        <artifactId>org-netbeans-modules-queries</artifactId>
+                  </exclusion>
+                  <exclusion>
+                        <groupId>org.netbeans.api</groupId>
+                        <artifactId>org-netbeans-swing-outline</artifactId>
+                  </exclusion>
+                  <exclusion>
+                        <groupId>org.netbeans.api</groupId>
+                        <artifactId>org-netbeans-swing-tabcontrol</artifactId>
+                  </exclusion>
+                  <exclusion>
+                        <groupId>org.netbeans.api</groupId>
+                        <artifactId>org-openide-actions</artifactId>
+                  </exclusion>
+                  <exclusion>
+                        <groupId>org.netbeans.api</groupId>
+                        <artifactId>org-openide-explorer</artifactId>
+                  </exclusion>
+                  <exclusion>
+                        <groupId>org.netbeans.api</groupId>
+                        <artifactId>org-openide-io</artifactId>
+                  </exclusion>
+                  <exclusion>
+                        <groupId>org.netbeans.api</groupId>
+                        <artifactId>org-openide-nodes</artifactId>
+                  </exclusion>
+                  <exclusion>
+                        <groupId>org.netbeans.api</groupId>
+                        <artifactId>org-openide-text</artifactId>
+                  </exclusion>
+                  <exclusion>
+                        <groupId>org.netbeans.api</groupId>
+                        <artifactId>org-openide-windows</artifactId>
+                  </exclusion>
+            </exclusions>
         </dependency>
     </dependencies>
     
